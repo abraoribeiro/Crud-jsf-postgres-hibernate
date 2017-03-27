@@ -22,6 +22,7 @@
 		<!-- Livro -->
 		<mapping class="com.loja.beans.Produto" />
 		<mapping class="com.loja.beans.Pessoa"/>
+		<mapping class="com.loja.beans.Fone"/>
 		
 	</session-factory>
 </hibernate-configuration>

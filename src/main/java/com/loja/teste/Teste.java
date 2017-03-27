@@ -10,7 +10,7 @@ import com.loja.persistencia.ProdutoDAO;
 public class Teste {
 
 	public static void main(String[] args) {
-		
+		/*
 		Produto p = new Produto();
 		Pessoa pe = new Pessoa();
 		p.setNome("sabao");
@@ -18,19 +18,19 @@ public class Teste {
 		pe.setNome("joao");
 		pe.setBairro("bairro");
 		System.out.println(p.getId());
-		
+		*/
 		ProdutoDAO pd = new ProdutoDAO();
 		PessoaDAO ped = new PessoaDAO();
-		pd.listagem("kkk");
-		ped.inserir(pe);
+	//	pd.listagem("kkk");
+	//	ped.inserir(pe);
 		
 		//ProdutoCtrl pc = new ProdutoCtrl();
 	//	pc.actionGravar();
 		
-		//HibernateUtil.getSessionFactory().openSession();
+		HibernateUtil.getSessionFactory().openSession();
 		
 		
-		//HibernateUtil.getSessionFactory().close();
+		HibernateUtil.getSessionFactory().close();
 		System.out.println("sucesso");
 	}
 

@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.util.List;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+
+import com.loja.beans.Fone;
 import com.loja.beans.Pessoa;
 import com.loja.persistencia.PessoaDAO;
 
@@ -50,5 +52,16 @@ public class PessoaCtrl implements Serializable {
 	public String actionAlterar(Pessoa p) {
 		pessoa = p;
 		return "form_pessoa";
+	}
+	
+	public String actionInserirFone(){
+		Fone fone = new Fone();
+		fone.setPessoa(pessoa);
+		pessoa.getFones().add(fone);
+		return "lista_pessoas";
+	}
+	public String actionExcluirFone(){
+		
+		return "lista_pessoas";
 	}
 }

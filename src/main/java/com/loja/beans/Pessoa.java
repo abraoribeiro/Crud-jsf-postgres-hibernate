@@ -1,10 +1,8 @@
 package com.loja.beans;
 
-
-
-
-
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.*;
 
@@ -144,4 +142,16 @@ public class Pessoa {
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
+	
+	public List<Fone> getFones() {
+		return fones;
+	}
+
+	public void setFones(List<Fone> fones) {
+		this.fones = fones;
+	}
+
+	@OneToMany (mappedBy = "pessoa", cascade = CascadeType.ALL )
+	private List<Fone> fones = new ArrayList<Fone>();
+	
 }
