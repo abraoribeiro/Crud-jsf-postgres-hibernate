@@ -5,9 +5,13 @@ import javax.persistence.*;
 @Entity
 @Table (name="fone")
 public class Fone {
-	
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	private String nome;
+	@Column (name="fon_numero")
+	private String numero;
+	@Column (name="fon_descricao")
 	private String descricao;
 	
 	public int getId() {
@@ -16,11 +20,11 @@ public class Fone {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getNome() {
-		return nome;
+	public String getNumero() {
+		return numero;
 	}
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setNumero(String numero) {
+		this.numero = numero;
 	}
 	public String getDescricao() {
 		return descricao;
