@@ -60,7 +60,7 @@ public class PessoaCtrl implements Serializable {
 		pessoa.getFones().add(fone);
 		return "lista_pessoas";
 	}
-	public String actionExcluirFone(){
+	public String actionExcluirFone(Fone f){
 		
 		return "lista_pessoas";
 	}
