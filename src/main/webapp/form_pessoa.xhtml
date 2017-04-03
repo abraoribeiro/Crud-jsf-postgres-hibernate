@@ -23,7 +23,6 @@
 			<h:outputLabel value="RG:" />
 			<h:inputText value="#{viewPessoas.pessoa.rg}" />
 			<h:outputLabel value="Data de nascimento:" />
-
 			<h:inputText styleClass="campoTexto" id="periodoInicial"
 				value="#{viewPessoas.pessoa.dataNascimento}">
 				<f:convertDateTime type="date" pattern="dd/mm/yyyy" />
@@ -54,13 +53,13 @@
 				<f:facet name="header">
 					<h:outputLabel value="Numero"/>
 				</f:facet>
-					<h:inputText value="#{fone.numero}" size="20" maxlength="20"/>
+					<h:inputText value="#{fone.numero}" />
 			</h:column>
 			<h:column>
 				<f:facet name="header">
 					<h:outputLabel value="Descricao"/>
 				</f:facet>
-					<h:inputText value="#{fone.descricao}" size="20" maxlength="20"/>
+					<h:inputText value="#{fone.descricao}" />
 			</h:column>
 			<h:column>
 			<h:commandLink value="Remover" action="#{viewPessoas.actionExcluirFone(fone)}"/>

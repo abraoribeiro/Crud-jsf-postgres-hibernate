@@ -11,7 +11,6 @@ import javax.persistence.Table;
 @Table (name="produto")
 public class Produto {
 	
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "pro_id")

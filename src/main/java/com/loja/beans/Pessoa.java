@@ -31,7 +31,7 @@ public class Pessoa {
 	@Column(name = "pes_uf", length = 2, nullable = true)
 	private char uf;
 	@Column(name = "pes_cep", length = 30, nullable = true)
-	private int cep;
+	private Integer cep;
 	@Column(name = "pes_email", length = 40, nullable = true)
 	private String email;
 	@Column(name = "pes_senha", length = 32, nullable = true)
@@ -111,11 +111,11 @@ public class Pessoa {
 		this.uf = uf;
 	}
 
-	public int getCep() {
+	public Integer getCep() {
 		return cep;
 	}
 
-	public void setCep(int cep) {
+	public void setCep(Integer cep) {
 		this.cep = cep;
 	}
 
