@@ -51,5 +51,13 @@ public class FormaPgtoDAO implements Serializable {
 		sessao.close();
 		return lista;
 	}
+	
+	public static FormaPgto pesqId(int id){
+		Session sessao = HibernateUtil.getSessionFactory().openSession();
+		Query consulta = sessao.createQuery("from FormaPgto where id= :parametro");
+		consulta.setInteger("parametro", id);
+		sessao.close();
+		return (FormaPgto) consulta.uniqueResult();
+	}
 
 }
