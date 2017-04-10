@@ -8,12 +8,19 @@ public class FormaPgto {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column (name="fgp_id")
 	private int id;
+	@Column (name="fgp_numMaxParc", nullable= true)
 	private int numMaxParc;
+	@Column (name="fgp_descricao", nullable= true)
 	private String descricao;
+	@Column (name="fgp_numPadraoParc", nullable= true)
 	private int numPadraoParc;
+	@Column (name="fgp_intervaloDias", nullable= true)
 	private int intervaloDias;
+	@Column (name="fgp_percentualAcres", nullable= true)
 	private float percentualAcres;
+	
 	public int getId() {
 		return id;
 	}
