@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class FormaPgto {
 
 	@Id
-	
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private int numMaxParc;
 	private String descricao;
